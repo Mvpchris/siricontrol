@@ -8,8 +8,8 @@ import webbrowser
 
 #Add your gmail username and password here
 
-username = "voicecommands1000@gmail.com"
-password = "commands1000"
+username = "Your username"
+password = "Your password"
 
 #Edit to these arrays to add your own commands
 
