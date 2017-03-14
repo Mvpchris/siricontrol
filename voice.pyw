@@ -24,7 +24,7 @@ last_checked = -1
 def fetch_siri_command(mail):
     global last_checked
     mail.list()
-    mail.select("Inbox")
+    mail.select("Notes")
     result, uidlist = mail.search(None, "ALL")
     latest_email_id = uidlist[0].split()[-1]
     if latest_email_id == last_checked:
@@ -40,7 +40,7 @@ def main(username, password):
     mail = imaplib.IMAP4_SSL('imap.gmail.com', 993)
     mail.login(username, password)
     mail.list()
-    mail.select("Inbox")
+    mail.select("Notes")
     result, uidlist = mail.search(None, "ALL")
     latest_email_id = uidlist[0].split()[-1]
     last_checked = latest_email_id
